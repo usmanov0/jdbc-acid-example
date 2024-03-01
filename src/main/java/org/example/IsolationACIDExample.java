@@ -7,8 +7,7 @@ public class IsolationACIDExample {
         Connection conn = null;
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","postgres","root1");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/acid-db","postgres","root1");
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","C##ORACLE","root1");
             conn.setAutoCommit(false);
 
             PreparedStatement stmt = conn.prepareStatement("SELECT balance FROM accounts WHERE id = ?");

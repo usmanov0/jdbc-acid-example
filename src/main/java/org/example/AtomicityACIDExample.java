@@ -7,7 +7,7 @@ public class AtomicityACIDExample {
         Connection connection = null;
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","postgres","root1");
+            connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","C##ORACLE","root1");
             connection.setAutoCommit(false);
 
             PreparedStatement stmt = connection.prepareStatement("SELECT balance FROM accounts WHERE id = ?");
